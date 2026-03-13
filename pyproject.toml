@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "videotobookstory"
+version = "0.1.0"
+description = "Local-first MVP tool to convert videos into draft picture books"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+videotobookstory = "videotobookstory.main:run"
+videotobookstory-web = "videotobookstory.web:run_web"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
